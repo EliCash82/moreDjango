@@ -6,11 +6,9 @@ Replace this with more appropriate tests for your application.
 """
 
 from django.test import TestCase
+from models import Post
 
-
-class SimpleTest(TestCase):
-    def test_basic_addition(self):
-        """
-        Tests that 1 + 1 always equals 2.
-        """
-        self.assertEqual(1 + 1, 2)
+class PostTests(TestCase):
+    def test_str(self):
+        my_title = Post(title='This is a basic title for a basic test case')
+        self.assertEquals(str(my_title), 'This is a basic title for a basic test case',)
