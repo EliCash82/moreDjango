@@ -1,13 +1,11 @@
-<html>
-<head><title>Anderson's Development Blog: {{ single_post.title }}</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
 	<h2>{{ single_post.title }}</h2>
 	<ul>
 		<p><em>{{ single_post.created_at }}</em></p>
 		<p>{{ single_post.content }}</p>
 		<br/>
 	</ul>
-	<p><a href="/blog">Return to homepage</a>.<br/></p>
-</body>
-</html>
+	<p><a href="/blog">Return to homepage</a>.<br/>
+{% endblock %}
