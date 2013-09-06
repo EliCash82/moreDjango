@@ -5,7 +5,12 @@
 	<ul>
 		<p><em>{{ single_post.created_at }}</em></p>
 		<p>{{ single_post.content }}</p>
+		<p>Tag: {{ single_post.tag }}
 		<br/>
+		<p>
+		{% if single_post.image %}
+			<img src="/media/{{ single_post.image }}">
+		{% endif %}
 	</ul>
 	<p><a href="/blog">Return to homepage</a>.<br/>
 {% endblock %}
